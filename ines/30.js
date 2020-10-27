@@ -27,16 +27,18 @@ for(i=0;i<=10;i++){
 }
 
 //4
-/*for(i=0;i<=10;i++){
+for(i=0;i<=10;i++){
     console.log("4==>",i+" * 9 = " + i*9);
 }
-    //Bonus
-    for(i=0;i<=10;i++){
+  //Bonus
+for(i=0;i<=10;i++){
         for(j=0;j<=10;j++){
-        console.log("Bonus==>",i + "*"+ j + "=" + i*j);
+        console.log(`Bonus==> ${i} * ${j} = `+i*j);
         }
-    }
-*/
+}
+
+
+
 
 //5
 for(i=1;i<=100;i++){
@@ -56,25 +58,15 @@ for(i=1;i<=100;i++){
 
 
 //6
-for(i=1;i<=10;i++){
-    if(i%3===0 || i%5===0){
-        for(j=1;j<=10;j++){
-            if(j%5===0 || j%3===0){
-                console.log(i,"+",j,"=",i +j);
-            }
-        }
-    }
-}
-
-/*var sum = 0;
-for (var x = 0; x < 1000; x++)
+let sum = 0;
+for (let x = 0; x < 1000; x++)
 {
-    if (x % 3 === 0 || x % 5 === 0)
+    if (x % 3 === 0 && x % 5 === 0)
     {
        sum += x;
     }
 }
-console.log(sum);*/
+console.log("sum==>",sum);
 
 //7
 //>100 200 300 400 500 600 700 800 900 1000
@@ -107,26 +99,15 @@ for(i=1;i<=4;i++){
 console.log("*********************************");
 
 //>0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
-for(i=0;i<=4;i++){
-    for(i=0;i<=4;i++){
-        console.log(i);
-    }
-    for(i=0;i<=4;i++){
-        console.log(i);
-    }
-    for(i=0;i<=4;i++){
-        console.log(i);
+for(i=0;i<=3;i++){
+    for(j=0;j<=4;j++){
+        console.log(j);
     }
 }
 
 
 //8
 let palindrome = "tarrattarrat";
-let palindromeArrayNormal = palindrome.split("");
-let palindromeArrayReverse = palindrome.split("");
-palindromeArrayReverse.reverse();
-let palindromeNormal = palindromeArrayNormal.join("");
-let palindromeReverse = palindromeArrayReverse.join("")
-let isPalindrome = (palindromeReverse === palindromeNormal)?"It is palindrome":"It is not palindrome"
-
+let palindromeReverse = palindrome.split("").reverse().join("");
+let isPalindrome = (palindrome === palindromeReverse)?"It is palindrome":"It is not palindrome"
 console.log(isPalindrome);
