@@ -34,14 +34,14 @@ console.log(box);
 //5. Fizz Buzz Write a program which iterates the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
 
 for (let i = 1; i <= 100; i++) {
+  if (i % 3 == 0 && i % 5 == 0) {
+    console.log("FizzBuzz");
+  }
   if (i % 3 == 0) {
     console.log("Fizz");
   }
   if (i % 5 == 0) {
     console.log("Buzz");
-  }
-  if (i % 3 == 0 && i % 5 == 0) {
-    console.log("FizzBuzz");
   }
 }
 
@@ -107,3 +107,11 @@ for (let i = 0; i <= 4; i++) {
   x6.push(`${i}`);
 }
 console.log(x6.join(" "), x6.join(" "), x6.join(" "));
+
+// 8. isPalindrome. Write a program to check whether a word is a palindrome or not. Note: a palindrome is a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or tarrattarrat
+let str = "Halaluya";
+let arr = str.split("").reverse().join("");
+
+if ((str == arr) == true) {
+  console.log(`${str} is a Palindrome`);
+} else console.log(`${str} is not a Palindrome`);
