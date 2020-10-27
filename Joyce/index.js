@@ -7,7 +7,11 @@ for (let i = 1; i < 21; i++) {
 
 //2. There are i bottles of beer on the wall. Write a program that will output, "There is one bottle of beer on the wall." "There are two bottles of beer on the wall" up until there are five bottles.
 for (let i = 1; i <= 5; i++) {
-  console.log(`There is ${i} bottle of beer on the wall.`);
+  if (i === 1) {
+    console.log(`There is ${i} bottle of beer on the wall.`);
+  } else {
+    console.log(`There are ${i} bottle of beer on the wall.`);
+  }
 }
 
 //3. The odd/even reporter. Write a program that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even").
@@ -42,10 +46,13 @@ for (let i = 1; i <= 100; i++) {
 }
 
 //6. Sum of Multiples: Write a program to add the multiples of 3 and 5 under 1000.
+let sum = 0;
 for (let i = 1; i < 1000; i++) {
-  let sum = 3 * 5;
-  console.log(i + sum);
+  if (i % 3 === 0 && i % 5 === 0) {
+    sum += i;
+  }
 }
+console.log(sum);
 
 //7. Write programs that produce the following outputs:
 
