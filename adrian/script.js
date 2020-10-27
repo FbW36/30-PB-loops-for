@@ -39,8 +39,7 @@ for (let i = 1; i <= 20; i++) {
 //6
 /* let totalMultiples3and5 = 0;
 for (let i = 0; i < 1000; i++) {
-  if (i % 3 === 0) totalMultiples3and5 += i;
-  if (i % 5 === 0) totalMultiples3and5 += i;
+  if (i % 3 === 0 && i % 5 === 0) totalMultiples3and5 += i;
 }
 console.log(totalMultiples3and5); */
 
