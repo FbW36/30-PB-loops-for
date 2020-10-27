@@ -75,15 +75,15 @@ for (;;) {
   if (i === 5) {
     break;
   }
+} 
+for (let i = 0; i < 4; i++) {
+  for (let j = 0; j < 5; j++) {
+    console.log(`${j}`);
+  }
 } */
 //8
 let word = "madam";
-/* for (let i = 0; i < Math.floor(word.length / 2); i++) {
-  if (word[i] !== word[word.length - 1 - i]) {
-    console.log(false);
-  }
-  console.log(true);
-} */
+
 function checkPalindrom(word) {
   for (let i = 0; i < Math.floor(word.length / 2); i++) {
     if (word[i] !== word[word.length - 1 - i]) {
