@@ -142,8 +142,9 @@ for (let i = 1; i <= 3; i++)
     }
 }
 
-// 8-
-let originalWord = 'madam';
+
+// 8- a without for loop
+let originalWord = 'madamhello';
 let wordToArray = originalWord.split("");
 console.log(wordToArray, typeof wordToArray); 
 
@@ -152,6 +153,26 @@ console.log(wordToArray);
 
 let manipulatedWord = wordToArray.join("");
 console.log(manipulatedWord, typeof manipulatedWord);
+
+if ( originalWord === manipulatedWord )
+{
+    console.log(`The word ${originalWord} is palindrome`);
+}
+else
+{
+    console.log(`The word ${originalWord} is not a palindrome word`);
+}
+
+
+// 8- a using for loop
+
+
+manipulatedWord = '';
+
+for (let i = originalWord.length-1; i >= 0; i--)
+{
+    manipulatedWord = manipulatedWord.concat(originalWord[i]);
+}
 
 if ( originalWord === manipulatedWord )
 {
