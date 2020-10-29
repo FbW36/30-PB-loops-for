@@ -59,7 +59,7 @@ console.log(sum);
 //100 200 300 400 500 600 700 800 900 1000
 let x = [];
 for (let i = 1; i <= 10; i++) {
-  x.push(`${i}00`);
+  x.push(i * 100);
 }
 console.log(x.join(" "));
 
@@ -96,22 +96,48 @@ console.log(x4.join(" "));
 
 // 1 1 1 2 2 2 3 3 3 4 4 4
 let x5 = [];
-for (let i = 1; i <= 4; i++) {
-  x5.push(`${i} ${i} ${i}`);
+for (let i = 1; i < 4; i++) {
+  for (let j = 0; j < 3; j++) {
+    x5.push(j);
+  }
 }
 console.log(x5.join(" "));
 
 // 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
 let x6 = [];
-for (let i = 0; i <= 4; i++) {
-  x6.push(`${i}`);
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 5; j++) {
+    x6.push(j);
+  }
 }
-console.log(x6.join(" "), x6.join(" "), x6.join(" "));
+console.log(x6.join(" "));
 
 // 8. isPalindrome. Write a program to check whether a word is a palindrome or not. Note: a palindrome is a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or tarrattarrat
-let str = "Halaluya";
-let arr = str.split("").reverse().join("");
+let name = "Javavaj";
+name = name.toLowerCase();
+let reversedName = name.split("").reverse().join("");
 
-if ((str == arr) == true) {
-  console.log(`${str} is a Palindrome`);
-} else console.log(`${str} is not a Palindrome`);
+console.log(reversedName);
+
+if (name === reversedName) {
+  console.log(`${name} is a palindrome`);
+} else {
+  console.log(`${name} is not a palindrome`);
+}
+
+// The second way (for loop)
+let name2 = "halaluha";
+let name3 = [];
+for (let i = name2.length - 1; i >= 0; --i) {
+  name3.push(name2[i]);
+  console.log("name3", name3);
+}
+
+let name4 = name3.join("");
+console.log(name4);
+
+if (name2 === name4) {
+  console.log(`${name2} is a palindrome`);
+} else {
+  console.log(`${name2} is not a palindrome`);
+}
