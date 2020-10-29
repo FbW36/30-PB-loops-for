@@ -121,4 +121,29 @@ for (let i = 0; i <= 4; i++) {
 // Write a program to check whether a word is a palindrome or not.
 // Note: a palindrome is a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or tarrattarrat
 
-// I need help or maybe we can do together in class???
+let name = "Aycan";
+
+name = name.toLowerCase();
+let reversedName = name.split("").reverse().join("");
+console.log("reversedName :>> ", reversedName);
+if (name === reversedName) {
+  console.log(`${name} is a palindrome`);
+} else {
+  console.log(`${name} is not palindrome`);
+}
+
+// with for loop solution
+
+let name2 = "maruja";
+let name3 = [];
+
+for (let i = name2.length - 1; i >= 0; --i) {
+  name3.push(name2[i]);
+}
+let name4 = name3.join("");
+console.log("name4 :>> ", name4);
+if (name2 === name4) {
+  console.log(`${name2} is a palindrome`);
+} else {
+  console.log(`${name2} is not palindrome`);
+}
