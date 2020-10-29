@@ -140,13 +140,15 @@ console.log(output7);
 // Write a program to check whether a word is a palindrome or not.
 
 // Note: a palindrome is a word, phrase, or sequence that reads the same backwards as forwards, e.g.madam or tarrattarrat
-let strToCheck = "hello olleh";
 
+let strToCheck = "hello olleh";
+strToCheck = strToCheck.toLocaleLowerCase();
 const backwardCheck = [];
 
 for (let i = strToCheck.length - 1; i >= 0; --i) {
   backwardCheck.push(strToCheck[i]);
 }
+
 let backwardStr = backwardCheck.join("");
 
 if (strToCheck === backwardStr) {
