@@ -95,11 +95,54 @@ for(let i=9; i=0; i--){
 }
 
 // 1 1 1 2 2 2 3 3 3 4 4 4
+let arr =[];
+for(let i=1;i<5;i++){
+    for(let j=0; j<3;j++){
+        arr.push(i)
+    }
+}
+console.log("1 1 1 2 2 2 3 3 3 4 4 4", arr.join(" "));
+
 
 
 // >
 // >0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
+const str = []
+for(let i=0; i<3; i++){
+    console.log(i);
+    for(let j=0; j<5; j++){
+        str.push[j]
+    }
+}
+console.log(str.join(" "));
 
 // 8. **isPalindrome.**
 // Write a program to check whether a word is a palindrome or not. 
 // Note: a palindrome is a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or tarrattarrat */
+
+//solution with for loops
+let name1 = "anna";
+let name2 = []
+for(let i = name1.length -1; i >=0; i--){
+    name2.push(name1[i])
+    console.log("name2 ==> ", name2);
+}
+let name3 = name2.join("")
+console.log("name3 ==> ", name3 );
+if(name1===name3){
+    console.log(`${name1} is a palindrome`);
+}else{
+    console.log(`${name1} is not a palindrome`);
+}
+
+
+//solution with if
+let name = "anna"
+name = name.toLowerCase()
+let reversedName = name.split("").reverse().join("")
+console.log("reversedName ==> ", reversedName);
+if(name===reversedName){
+    console.log(`${name} is a palindrome`);
+}else{
+console.log(`${name} not a palindrome`);
+}
