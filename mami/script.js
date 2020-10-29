@@ -132,6 +132,8 @@ for (let i = 1; i < 4; i++) {
 // ????????
 
 let word = "aaabbbbaaa";
+word = word.toLowerCase();
+
 let reverseWord = word.split("").reverse().join("");
 // console.log(reverseWord);
 if (word === reverseWord) {
@@ -139,9 +141,61 @@ if (word === reverseWord) {
 } else console.log(`${word} is not a palindrome`);
 
 let word2 = "aaaannnn";
+word2 = word2.toLowerCase();
+
 let reverseWord2 = word2.split("").reverse().join("");
 function isPalindrome(word2) {
   if (word2 === reverseWord2) {
     console.log(`${word2} is a palindrome`);
   } else console.log(`${word2} is not a palindrome`);
 }
+
+function isPalindrome(word2) {
+  if (word2 === reverseWord2) {
+    let reverseWord2 = word2.split("").reverse().join("");
+    console.log(`${word2} is a palindrome`);
+  } else console.log(`${word2} is not a palindrome`);
+}
+
+let word3 = "aaabbb";
+word3 = word3.toLowerCase();
+
+let rev = "";
+let arr = [];
+for (let i = word3.length - 1; i >= 0; i--) {
+  // rev.push(word3[i]);
+  rev += word3[i];
+  arr.push(word3[i]);
+  // let arr = arr.push[i]; //ReferenceError: Cannot access 'arr' before initialization
+}
+if (rev === word3) {
+  console.log(`${word3} is a palindrome`);
+} else console.log(`${word3} is not a palindrome`);
+
+console.log(arr);
+console.log(rev);
+// let word = "madam";
+
+// function checkPalindrom(word) {
+//   for (let i = 0; i < Math.floor(word.length / 2); i++) {
+//     if (word[i] !== word[word.length - 1 - i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(checkPalindrom(word));
+
+let name = "Anna";
+name = name.toLowerCase();
+let name2 = [];
+let reverseName = name.split("").reverse().join();
+for (let i = name.length - 1; i >= 0; i--) {
+  name2.push(name[i]);
+  console.log("name2", name2);
+}
+let name3 = name2.join("");
+console.log("name3", name3);
+if (name === name3) {
+  console.log(`${name} is a palindrome`);
+} else console.log(`${name} is not a palindrome`);
