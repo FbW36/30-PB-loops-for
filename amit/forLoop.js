@@ -51,42 +51,98 @@ for (i = 1; i <= 100; i++) {
   }
 }
 // 6 Write a program to add the multiples of 3 and 5 under 1000.
-let result = 0;
-for (let i = 0; i < 1000; i++) {
-  if (i % 3 === 0) result += i;
-  if (i % 5 === 0) result += i;
+let summ = 0;
+for (i = 1; i < 1000; i++) {
+  if (i % 3 === 0) {
+    summ += summ;
+  }
+  if (i % 5 === 0) {
+    summ += summ;
+  }
 }
-console.log(result);
+console.log(summ);
 
-//  100 200 300 400 500 600 700 800 900 1000
+//7a  100 200 300 400 500 600 700 800 900 1000
 for (i = 100; i <= 1000; i += 100) {
   console.log(i);
 }
 
-// 1 2 4 8 16 32 64 128
+//7b 1 2 4 8 16 32 64 128
+let nil = [];
 for (i = 1; i <= 128; i *= 2) {
-  console.log(i);
+  nil.push(i);
 }
+console.log(nil.join(" "));
 
 // 0 2 4 6 8 10
+let nil2 = [];
 for (i = 0; i <= 10; i += 2) {
-  console.log(i);
+  nil2.push(i);
 }
+console.log(nil2.join(""));
 
 // 3 6 9 12 15
+let nil3 = [];
 for (i = 3; i <= 15; i += 3) {
-  console.log(i);
+  nil3.push();
 }
+console.log(nil3.join(""));
 
 // 9 8 7 6 5 4 3 2 1 0
-
+let nil4 = [];
 for (i = 9; i >= 0; i--) {
-  console.log(i);
+  nil4.push();
+}
+console.log(nil4.join(""));
+
+// palindrom
+let name = "Anna";
+name = name.toLowerCase();
+let reversedName = name.split("").reverse().join("");
+console.log(reversedName);
+
+if (name === reversedName) {
+  console.log(`${name} is a polindrom`);
+} else {
+  console.log(`${name} is not a palindrom`);
 }
 
-// 1 1 1 2 2 2 3 3 3 4 4 4
-for (i = 1; i <= 4; i++) {
-  console.log(i, i, i);
+// second way with for loop
+
+let name2 = "anna";
+let name3 = [];
+for (let i = name2.length - 1; i >= 0; --i) {
+  name3.push(name2[i]);
 }
+
+let name4 = name3.join("");
+console.log(name4);
+
+if (name2 === name4) {
+  console.log(`${name2} is a polindrom`);
+} else {
+  console.log(`${name2} is not polindrom`);
+}
+
+//  1 1 1 2 2 2 3 3 3 4 4 4
+let arr = [];
+
+for (i = 1; i <= 4; i++) {
+  for (let j = 1; j <= 3; j++) {
+    arr.push(i);
+  }
+}
+console.log(arr.join(" "));
 
 // 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
+
+const str = [];
+
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 5; j++) {
+    str.push(j);
+  }
+}
+console.log(str.join(" "));
+
+//-----------------------
