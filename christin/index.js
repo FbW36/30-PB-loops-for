@@ -10,8 +10,12 @@ for (let i = 0; i <= 20; i++) {
 
 //?There are i bottles of beer on the wall.Write a program that will output, "There is one bottle of beer on the wall." "There are two bottles of beer on the wall" up until there are five bottles.
 
-for (let i = 0; i <= 5; i++) {
-  console.log(`2: There is ${i} bottle of beer on the wall.`);
+for (let i = 1; i <= 5; i++) {
+  if (i <= 1) {
+    console.log(`2: There is ${i} bottle of beer on the wall.`);
+  } else {
+    console.log(`2: There are ${i} bottles of beer on the wall.`);
+  }
 }
 
 //? 3. The odd / even reporter.Write a program that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen(e.g. "2 is even").
@@ -100,13 +104,11 @@ for (let i = 9; i >= 0; i--) {
 // 1 1 1 2 2 2 3 3 3 4 4 4
 
 const sum7 = [];
-for (let i = 0; 1 < 4; i++) {
-  for (let m = 0; m < 3; m++) {
-    console.log("8f", m);
-    sum7.push(i);
-    break;
+for (let i = 0; i < 4; i++) {
+  for (let m = 1; m < 5; m++) {
+    //console.log("8f", m);
+    sum7.push(m);
   }
-  break;
 }
 
 let output = sum7.join(" ");
