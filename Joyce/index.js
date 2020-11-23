@@ -2,15 +2,16 @@
 let res = 0;
 for (let i = 1; i < 21; i++) {
   res = res + i;
-  console.log(res);
 }
+console.log("total:", res);
 
 //2. There are i bottles of beer on the wall. Write a program that will output, "There is one bottle of beer on the wall." "There are two bottles of beer on the wall" up until there are five bottles.
-for (let i = 1; i <= 5; i++) {
-  if (i === 1) {
-    console.log(`There is ${i} bottle of beer on the wall.`);
+const beers = ["one", "two", "three", "four", "five"];
+for (let i = 0; i < beers.length; i++) {
+  if (beers[i] === "one") {
+    console.log(`There is ${beers[i]} bottle of beer on the wall.`);
   } else {
-    console.log(`There are ${i} bottle of beer on the wall.`);
+    console.log(`There are ${beers[i]} bottles of beer on the wall.`);
   }
 }
 
@@ -26,21 +27,27 @@ for (let i = 0; i <= 20; i++) {
 //4. Multiplication Tables. Write a program that will iterate from 0 to 10. For each iteration of the for loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18"). Bonus: Use a nested for loop to show the tables for every multiplier from 1 to 10 (100 results total).
 let box = [];
 for (let i = 0; i <= 10; i++) {
-  console.log(i * 9);
-  box.push(i * 9);
+  let sum = i * 9;
+  console.log(sum);
+  if (sum > 0) {
+    for (let j = 1; j <= 10; j++) {
+      let sum2 = sum * j;
+      box.push(sum2);
+    }
+  }
 }
-console.log(box);
+console.log(box.join(" "));
 
 //5. Fizz Buzz Write a program which iterates the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
 
 for (let i = 1; i <= 100; i++) {
-  if (i % 3 == 0 && i % 5 == 0) {
+  if (i % 3 === 0 && i % 5 === 0) {
     console.log("FizzBuzz");
   }
-  if (i % 3 == 0) {
+  if (i % 3 === 0) {
     console.log("Fizz");
   }
-  if (i % 5 == 0) {
+  if (i % 5 === 0) {
     console.log("Buzz");
   }
 }
@@ -65,8 +72,14 @@ console.log(x.join(" "));
 
 // 1 2 4 8 16 32 64 128
 let x1 = [];
+let total = 1;
 for (let i = 1; i <= 8; i++) {
-  x1.push(2 ** i);
+  if (i < 2) {
+    x1.push(i);
+  } else {
+    total *= 2;
+    x1.push(total);
+  }
 }
 console.log(x1.join(" "));
 
@@ -80,7 +93,7 @@ console.log(x2.join(" "));
 // 3 6 9 12 15
 let x3 = [];
 for (let i = 1; i <= 15; i++) {
-  if (i % 3 == 0) {
+  if (i % 3 === 0) {
     x3.push(i);
   }
 }
@@ -96,9 +109,9 @@ console.log(x4.join(" "));
 
 // 1 1 1 2 2 2 3 3 3 4 4 4
 let x5 = [];
-for (let i = 1; i < 4; i++) {
+for (let i = 1; i <= 4; i++) {
   for (let j = 0; j < 3; j++) {
-    x5.push(j);
+    x5.push(i);
   }
 }
 console.log(x5.join(" "));
@@ -117,8 +130,6 @@ let name = "Javavaj";
 name = name.toLowerCase();
 let reversedName = name.split("").reverse().join("");
 
-console.log(reversedName);
-
 if (name === reversedName) {
   console.log(`${name} is a palindrome`);
 } else {
@@ -128,13 +139,11 @@ if (name === reversedName) {
 // The second way (for loop)
 let name2 = "halaluha";
 let name3 = [];
-for (let i = name2.length - 1; i >= 0; --i) {
+for (let i = 0; i <= name2.length - 1; i++) {
   name3.push(name2[i]);
-  console.log("name3", name3);
 }
 
-let name4 = name3.join("");
-console.log(name4);
+let name4 = name3.reverse().join("");
 
 if (name2 === name4) {
   console.log(`${name2} is a palindrome`);
